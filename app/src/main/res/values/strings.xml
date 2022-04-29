@@ -4,5 +4,6 @@
     <string name="no_results">No results 😓</string>
     <string name="loading">Loading</string>
     <string name="image_view_description">Image view description</string>
+    <string name="high_res_photo">High res photo</string>
 
 </resources>

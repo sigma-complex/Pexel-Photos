@@ -1,5 +1,6 @@
 package com.hiddendimension.pexelphotos.feature_photo_search.presentation
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +12,7 @@ import com.bumptech.glide.load.resource.bitmap.CenterInside
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.hiddendimension.pexelphotos.R
 import com.hiddendimension.pexelphotos.feature_photo_search.domain.model.Photo
+import com.hiddendimension.pexelphotos.feature_photo_view.presentation.PhotoViewActivity
 
 class PhotoViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val name: TextView = view.findViewById(R.id.credit_name)
@@ -22,9 +24,11 @@ class PhotoViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     init {
         view.setOnClickListener {
             photo?.url?.let {
+                Intent(view.context, PhotoViewActivity::class.java).apply {
+                    this.putExtra("url", photo?.src?.medium)
+                    view.context.startActivity(this)
 
-
-
+                }
             }
         }
     }

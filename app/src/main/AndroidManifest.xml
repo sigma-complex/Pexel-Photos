@@ -13,10 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PexelPhotos">
         <activity
+            android:name=".feature_photo_view.presentation.PhotoViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".feature_photo_search.presentation.PhotoSearchActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
