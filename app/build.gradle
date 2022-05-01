@@ -6,16 +6,16 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdk rootProject.compileSdkVersion
 
     defaultConfig {
         applicationId "com.hiddendimension.pexelphotos"
-        minSdk 21
-        targetSdk 31
+        minSdk rootProject.minSdkVersion
+        targetSdk rootProject.targetSdkVersion
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "API_KEY", API_KEY)
     }
 
     buildTypes {

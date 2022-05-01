@@ -1,5 +1,6 @@
 package com.hiddendimension.pexelphotos.feature_photo_search.data.repository
 
+import com.hiddendimension.pexelphotos.BuildConfig
 import com.hiddendimension.pexelphotos.feature_photo_search.domain.model.PexelSearchResponse
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -20,7 +21,7 @@ interface PexelPhotoService {
 
     companion object {
         private const val BASE_URL = "https://api.pexels.com/v1/"
-        private const val TOKEN = "563492ad6f91700001000001561f515a6d054127b716dafcafceb740"
+        private const val TOKEN = BuildConfig.API_KEY
 
         fun create(): PexelPhotoService {
             val logger = HttpLoggingInterceptor()
